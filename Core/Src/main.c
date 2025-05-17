@@ -98,7 +98,33 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+  /*Blink 3times fast*/
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+  HAL_Delay(500);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+  HAL_Delay(500);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+  HAL_Delay(500);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+  HAL_Delay(500);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+  HAL_Delay(500);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+  HAL_Delay(500);
 
+  /*Blink 3times slow*/
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -203,34 +229,8 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-//  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-  /*Blink 3time fast*/
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
-  HAL_Delay(500);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-  HAL_Delay(500);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
-  HAL_Delay(500);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-  HAL_Delay(500);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
-  HAL_Delay(500);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-  HAL_Delay(500);
+HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
 
-  /*Blink 3time slow*/
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
-  HAL_Delay(1000);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-  HAL_Delay(1000);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
-  HAL_Delay(1000);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-  HAL_Delay(1000);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
-  HAL_Delay(1000);
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-  HAL_Delay(1000);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
